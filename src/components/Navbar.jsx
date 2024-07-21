@@ -21,13 +21,28 @@ export default function Navbar() {
         </div>
         <ul className="ml-8 text-white w-1/4 list-none flex justify-between">
           <li>
-            <a>Home</a>
+            <a
+              href=""
+              className="p-2 decoration-white border-b-[3px] border-[#FFBC00] border-solid "
+            >
+              Home
+            </a>
           </li>
           <li>
-            <a>Events</a>
+            <a
+              href=""
+              className=" decoration-white p-2 hover:border-b-[3px] hover:border-[#FFBC00] hover:border-solid"
+            >
+              Events
+            </a>
           </li>
           <li>
-            <a>About Us</a>
+            <a
+              href=""
+              className="decoration-white p-2 hover:border-b-[3px] hover:border-[#FFBC00] hover:border-solid"
+            >
+              About Us
+            </a>
           </li>
         </ul>
         <div

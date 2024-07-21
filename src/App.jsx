@@ -1,6 +1,9 @@
 import AboutOverview from "./components/AboutOverview";
+import ContactUs from "./components/ContactUs";
 import EventOverview from "./components/EventOverview";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import NewsTeller from "./components/NewsTeller";
 
 function App() {
   return (
@@ -8,6 +11,9 @@ function App() {
       <Hero />
       <EventOverview />
       <AboutOverview />
+      <NewsTeller />
+      <ContactUs />
+      <Footer />
     </>
   );
 }

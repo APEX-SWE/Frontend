@@ -6,7 +6,13 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { admins } from "../data/AdminData";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 export default function AboutOverview() {
   return (
     <>
@@ -52,11 +58,43 @@ export default function AboutOverview() {
           />
         </div>
         <div>
-          <button className="mt-8 mb-8 w-[200px] h-[50px] bg-[#FFBC00] text-white text-center rounded-md">
+          <button className="mt-8 mb-8 w-[150px] h-[50px] bg-[#FFBC00] text-white text-center rounded-md">
             Learn More
           </button>
         </div>
       </div>
+      <div className="w-full flex bg-[#FFE8E8] items-center justify-center">
+        <Swiper
+          modules={[Pagination, Navigation, A11y]}
+          slidesPerView={3}
+          navigation
+          spaceBetween={30}
+          className="w-[70%] h-[70vh] flex items-center justify-center"
+        >
+          {admins.map((admin) => (
+            <SwiperSlide
+              key={admin.id}
+              className="flex flex-col items-center justify-center"
+            >
+              <img
+                className="w-[200px] h-[200px] rounded-full"
+                src={admin.image}
+                alt={admin.name}
+              />
+              <h3 className="text-black text-[1.5rem] font-semibold">
+                {admin.name}
+              </h3>
+              <p className="text-[#242424] text-[1rem] font-normal mb-2">
+                {admin.role}
+              </p>
+              <p className="text-[#4a4a4a] text-[0.8rem] text-center font-light w-[250px]">
+                {admin.about}
+              </p>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className="w-full bg-[#d8d8d8] h-[1px]"></div>
     </>
   );
 }

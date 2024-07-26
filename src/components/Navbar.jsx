@@ -1,12 +1,13 @@
 import React from "react";
 import { useEffect, useRef } from "react";
-export default function Navbar() {
+import { NavLink } from "react-router-dom";
+export default function Navbar({ fontColor, hoverColor, padding }) {
   const signup = useRef();
   const button = useRef();
   useEffect(() => {
     if (signup.current && button.current) {
       signup.current.addEventListener("mouseover", () => {
-        button.current.style.backgroundColor = "#144ABE43";
+        button.current.style.backgroundColor = hoverColor;
       });
       signup.current.addEventListener("mouseout", () => {
         button.current.style.backgroundColor = "transparent";
@@ -15,43 +16,85 @@ export default function Navbar() {
   }, [signup]);
   return (
     <>
-      <div className="w-full pt-3 flex justify-between items-center">
+      <div
+        className={
+          "w-full pt-3 flex justify-between items-center" + " " + padding
+        }
+      >
         <div>
           <img className="w-16" src="./logo-100.png" alt="YTN logo" />
         </div>
-        <ul className="ml-8 text-white w-1/4 list-none flex justify-between">
+        <ul
+          className={
+            "ml-8 w-1/4 list-none flex justify-between" +
+            " " +
+            "text-" +
+            fontColor
+          }
+        >
           <li>
-            <a
-              href=""
-              className="p-2 decoration-white border-b-[3px] border-[#FFBC00] border-solid "
+            <NavLink
+              to={"/"}
+              className={({ isActive }) =>
+                isActive
+                  ? "decoration-" +
+                    fontColor +
+                    " " +
+                    "p-2 border-b-[3px] border-[#FFBC00] border-solid"
+                  : "decoration-" + fontColor
+              }
             >
               Home
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              href=""
-              className=" decoration-white p-2 hover:border-b-[3px] hover:border-[#FFBC00] hover:border-solid"
+            <NavLink
+              to={"/events"}
+              className={({ isActive }) =>
+                isActive
+                  ? "decoration-" +
+                    fontColor +
+                    " " +
+                    "p-2 border-b-[3px] border-[#FFBC00] border-solid"
+                  : "decoration-" + fontColor
+              }
             >
               Events
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a
-              href=""
-              className="decoration-white p-2 hover:border-b-[3px] hover:border-[#FFBC00] hover:border-solid"
+            <NavLink
+              to={"/about"}
+              className={({ isActive }) =>
+                isActive
+                  ? "decoration-" +
+                    fontColor +
+                    " " +
+                    "p-2 border-b-[3px] border-[#FFBC00] border-solid"
+                  : "decoration-" + fontColor
+              }
             >
               About Us
-            </a>
+            </NavLink>
           </li>
         </ul>
         <div
           ref={button}
-          className="auth flex w-fit p-2 border-x border-y border-white border-solid rounded-full"
+          className={
+            "auth flex w-fit p-2 border-x-2 border-y-2 border-solid rounded-full" +
+            " " +
+            "text-" +
+            fontColor
+          }
         >
           <button
             ref={signup}
-            className="signup text-white rounded-full p1 px-8 text-center"
+            className={
+              "signup rounded-full p1 px-8 text-center" +
+              " " +
+              "text-" +
+              fontColor
+            }
           >
             <p>Sign up</p>
           </button>

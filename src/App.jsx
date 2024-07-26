@@ -1,21 +1,26 @@
-import AboutOverview from "./components/AboutOverview";
-import ContactUs from "./components/ContactUs";
-import EventOverview from "./components/EventOverview";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import NewsTeller from "./components/NewsTeller";
+import { createBrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import EventsPage from "./pages/EventsPage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "about",
+    element: <AboutPage />,
+  },
+  {
+    path: "events",
+    element: <EventsPage />,
+  },
+]);
 
 function App() {
-  return (
-    <>
-      <Hero />
-      <EventOverview />
-      <AboutOverview />
-      <NewsTeller />
-      <ContactUs />
-      <Footer />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

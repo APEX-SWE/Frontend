@@ -16,7 +16,7 @@ export default function Hero() {
       style={{ backgroundImage: 'url("./background.jpg")' }}
       className="px-5 bg-no-repeat bg-cover w-full h-dvh"
     >
-      <Navbar />
+      <Navbar fontColor={"white"} hoverColor={"#144ABE43"} />
       <div className="w-full flex flex-col items-center justify-center mt-[200px]">
         <div className=" absolute left-0 bg-white w-[55px] rounded-e-[18px] h-[250px] flex flex-col justify-around items-center">
           <a

@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 import Navbar from "../components/Navbar";
 
 export default function AboutPage() {
@@ -58,69 +58,27 @@ export default function AboutPage() {
       </div>
 
 
-
-    
-
-      {/* <div className="contentleadership">
-
-        <h3>Leadership</h3>
-
-        <div className="cards">
-          <div className="card1">
-
-           
-              <h3>val kraidy</h3>
-              <p>qwe sdf df sdfg</p>
-            
-          </div>
-
-          <div className="card2">
-
-           
-              <h3>kraidy val</h3>
-              <p>css wfwf f</p>
-            
-          </div>
-
-          <div className="card3">
-
-           
-              <h3>val k kraidy</h3>
-              <p>effveee efef effef eve</p>
-            
-          </div>
-        </div>
-
-      </div> */}
-
-
-      {/* <footer>
-        backgroundColor:'#000
-      </footer> */}
-
     </div>
 {/* 
 GET TO KNOW US */}
-    <div style={{padding:50}}>
-        <div style={{backgroundColor:'#F5F6FA',height:600}} >
+
+
+    <div style={{padding:50,display:'flex'}}>
+        {/* <div style={{backgroundColor:'#F5F6FA',height:600}} >
           
 
         <h3 style={{textAlign:'center',fontSize:20,padding:30}}> Get To Know Us</h3>
         <p style={{textAlign:'center',padding:10}}>What sparks your interest: the curiosity driving you to know more, or the sheer fascination of what you're exploring?</p>
 
-
-
-        <div style={{flexDirection:'row'}}>
-
-           
-         <div style={{justifyContent:'space-between'}}>
-          
+         <div style={{flexDirection:'row'}}>
       
-            <div style={{position:'absolute',paddingLeft:600,paddingRight:300}}>
+            <div style={{position:'absolute',
+             paddingLeft:600,paddingRight:300
+            }}>
 
               <h3 style={{textAlign:'center',fontSize:20,padding:10}}>Our Organization</h3>
 
-              <p style={{color:'#454545',justifyContent:'center',width:410,fontWeight:500}}
+              <p style={{color:'#454545',justifyContent:'center',fontWeight:500}}
               
               
               >Our mission is simple yet profound: to turn the fascination for technology into tangible outcomes that shape our reality.
@@ -132,7 +90,7 @@ GET TO KNOW US */}
             
             </div>
 
-             <div style={{justifyContent:'center',paddingLeft:200}}>
+             <div style={{justifyContent:'center',paddingLeft:100}}>
                 <img
                   src="src/aboutphotos/image 21.png"
                   style={{height:140,margin:10}}
@@ -147,22 +105,24 @@ GET TO KNOW US */}
 
             </div>
           </div>
-        </div>
+        </div> */}
+
+        <h1>  Hi</h1>
 
       </div>
 
-    </div>
+  
 
      {/* LEADERSHIP */}
-
-    
- 
+   
+       < div style={{paddingLeft:50,paddingRight:50}}>
         <div style={{
            flex:1,
-         backgroundColor:'#F5F6FA',paddingLeft:50,paddingRight:50}}>
-          <h2 style={{fontSize:30,textAlign:'center',fontWeight:'500'}}>Leadership</h2>
+           height:500,
+         backgroundColor:'#F5F6FA'}}>
+          <h2 style={{fontSize:30,textAlign:'center',fontWeight:'500',Bottom:50,top:30}}>Leadership</h2>
 
-          <div style={{justifyContent:'center',flexDirection:'row',gap:90,
+          <div style={{justifyContent:'center',flexDirection:'row',gap:60,
            display:'flex',
           margin:30}}>
 
@@ -195,6 +155,8 @@ GET TO KNOW US */}
 
 
           </div>
+
+        </div>
 
         </div>
 

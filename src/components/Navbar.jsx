@@ -22,7 +22,7 @@ export default function Navbar({ fontColor, hoverColor, padding }) {
         }
       >
         <div>
-          <img className="w-16" src="./logo-100.png" alt="YTN logo" />
+          <img className="w-16" src="/logo-100.png" alt="YTN logo" />
         </div>
         <ul
           className={

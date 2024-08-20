@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Navbar from "./Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +9,9 @@ import {
   faLinkedin,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { EventData } from "../data/EventData";
+import SearchBar from "./SearchBar";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -51,7 +54,7 @@ export default function Hero() {
           </a>
           <a
             href=""
-            className="hover:scale-110 transition-all decoration-black"
+            className="hover:scale-110  transition-all decoration-black"
           >
             <FontAwesomeIcon
               className="text-[30px]"
@@ -63,19 +66,12 @@ export default function Hero() {
         <h2 className="text-white font-semibold text-[45px]">
           Welcome to Youth Tech Nexus
         </h2>
-        <div className=" items-center p-1 flex justify-center mt-4 w-[55rem] h-[3.5rem] rounded-full bg-white">
-          <input
-            className="w-full rounded-full outline-none border-none pl-[30px] pr-2"
-            placeholder="Search Events..."
-            type={"text"}
-          />
-          <div className=" cursor-pointer h-[50px] w-[53px] rounded-full flex justify-center items-center  bg-[#FFBC00]">
-            <FontAwesomeIcon color="#fff" icon={faMagnifyingGlass} />
+        <SearchBar height={"h-[3.5rem]"} listTopMargin={"mt-[400px]"} />
+        <Link to={"/events"}>
+          <div className="mt-6 cursor-pointer bg-[#FFBC00] h-[45px] text-white flex justify-center items-center px-[20px] rounded-md">
+            <h3>Browse Events</h3>
           </div>
-        </div>
-        <div className="mt-6 cursor-pointer bg-[#FFBC00] h-[45px] text-white flex justify-center items-center px-[20px] rounded-md">
-          <h3>Browse Events</h3>
-        </div>
+        </Link>
       </div>
     </div>
   );

@@ -13,6 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Link } from "react-router-dom";
 export default function AboutOverview() {
   return (
     <>
@@ -58,9 +59,11 @@ export default function AboutOverview() {
           />
         </div>
         <div>
-          <button className="mt-8 mb-8 w-[150px] h-[50px] bg-[#FFBC00] text-white text-center rounded-md">
-            Learn More
-          </button>
+          <Link to={"/about"}>
+            <button className="mt-8 mb-8 w-[150px] h-[50px] bg-[#FFBC00] text-white text-center rounded-md">
+              Learn More
+            </button>
+          </Link>
         </div>
       </div>
       <div className="w-full flex bg-[#FFE8E8] items-center justify-center">

@@ -64,7 +64,7 @@ GET TO KNOW US */}
 
 
     <div style={{padding:50,display:'flex'}}>
-        {/* <div style={{backgroundColor:'#F5F6FA',height:600}} >
+       <div style={{backgroundColor:'#F5F6FA',height:500,width:1800}} >
           
 
         <h3 style={{textAlign:'center',fontSize:20,padding:30}}> Get To Know Us</h3>
@@ -90,7 +90,7 @@ GET TO KNOW US */}
             
             </div>
 
-             <div style={{justifyContent:'center',paddingLeft:100}}>
+             <div style={{justifyContent:'center',paddingLeft:250}}>
                 <img
                   src="src/aboutphotos/image 21.png"
                   style={{height:140,margin:10}}
@@ -105,9 +105,9 @@ GET TO KNOW US */}
 
             </div>
           </div>
-        </div> */}
+        </div> 
 
-        <h1>  Hi</h1>
+        {/* <h1>  Hi</h1> */}
 
       </div>
 
